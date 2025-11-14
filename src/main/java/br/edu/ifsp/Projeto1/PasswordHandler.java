@@ -1,7 +1,6 @@
 package br.edu.ifsp.Projeto1;
 
 public class PasswordHandler extends Handler{
-    private Handler next;
     private boolean validateMaiscula = false;
     private boolean validateMinuscula = false;
     private boolean validateNumeros = false;
@@ -33,8 +32,8 @@ public class PasswordHandler extends Handler{
             return "Senha deve ter no minimo 1 letra maiuscula, 1 letra minuscula e 1 numero";
         }
 
-        if(next != null){
-            return next.handle(request);
+        if(getNext() != null){
+            return getNext().handle(request);
         }
         return null;
     }

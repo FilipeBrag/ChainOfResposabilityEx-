@@ -9,4 +9,8 @@ public abstract class Handler {
     }
 
     public abstract String handle(Request request);
+
+    public Handler getNext() {
+        return next;
+    }
 }

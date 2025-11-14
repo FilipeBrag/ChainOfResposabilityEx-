@@ -10,6 +10,7 @@ public class EmailHandler extends Handler{
 
     @Override
     public String handle(Request request) {
+        System.out.println("EmailHandler");
         if(request.getEmail() == null || request.getEmail().isBlank()){
             return "Email é campo obrigatório";
         }
@@ -22,3 +23,4 @@ public class EmailHandler extends Handler{
         return null;
     }
 }
+

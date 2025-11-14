@@ -11,7 +11,7 @@ public class NameHandler extends Handler {
     @Override
     public String handle(Request request) {
         if(request.getName() == null || request.getName().isBlank()){
-            return "Nome é campo obrigatorio";
+            return "Nome é campo obrigatório";
         }
         if(next != null){
             return next.handle(request);
